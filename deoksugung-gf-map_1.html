@@ -1,0 +1,1059 @@
+<title>Deoksugung Gluten-Free Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700&family=Lora:ital,wght@0,500;0,600;1,400&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #211F1A;
+    --ink-soft: #5B584C;
+    --ink-faint: #8B876F;
+    --ground: #EEEADC;
+    --surface: #FBFAF3;
+    --surface-raised: #FFFFFF;
+    --line: rgba(33,31,26,0.14);
+    --line-strong: rgba(33,31,26,0.28);
+    --accent: #1F6F64;
+    --accent-soft: rgba(31,111,100,0.12);
+    --full: #3C8562;
+    --full-bg: rgba(60,133,98,0.14);
+    --full-ink: #285C43;
+    --partial: #A9761F;
+    --partial-bg: rgba(184,134,46,0.16);
+    --partial-ink: #8A5F17;
+    --home: #B0432E;
+    --home-bg: rgba(176,67,46,0.14);
+    --home-ink: #93361F;
+    --shadow: 0 1px 2px rgba(33,31,26,0.06), 0 8px 24px -12px rgba(33,31,26,0.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EEEAE0;
+      --ink-soft: #B9B4A2;
+      --ink-faint: #837E6C;
+      --ground: #161712;
+      --surface: #1D1E18;
+      --surface-raised: #24251E;
+      --line: rgba(238,234,224,0.14);
+      --line-strong: rgba(238,234,224,0.26);
+      --accent: #59C6B4;
+      --accent-soft: rgba(89,198,180,0.14);
+      --full: #74C797;
+      --full-bg: rgba(116,199,151,0.16);
+      --full-ink: #9BDDB6;
+      --partial: #E3AD5C;
+      --partial-bg: rgba(227,173,92,0.16);
+      --partial-ink: #F0C687;
+      --home: #E8836C;
+      --home-bg: rgba(232,131,108,0.16);
+      --home-ink: #F2A793;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px -12px rgba(0,0,0,0.55);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #EEEAE0;
+    --ink-soft: #B9B4A2;
+    --ink-faint: #837E6C;
+    --ground: #161712;
+    --surface: #1D1E18;
+    --surface-raised: #24251E;
+    --line: rgba(238,234,224,0.14);
+    --line-strong: rgba(238,234,224,0.26);
+    --accent: #59C6B4;
+    --accent-soft: rgba(89,198,180,0.14);
+    --full: #74C797;
+    --full-bg: rgba(116,199,151,0.16);
+    --full-ink: #9BDDB6;
+    --partial: #E3AD5C;
+    --partial-bg: rgba(227,173,92,0.16);
+    --partial-ink: #F0C687;
+    --home: #E8836C;
+    --home-bg: rgba(232,131,108,0.16);
+    --home-ink: #F2A793;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 28px -12px rgba(0,0,0,0.55);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--ground);
+    color: var(--ink);
+  }
+
+  body {
+    font-family: "Barlow", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  a { color: var(--accent); }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 24px 72px;
+  }
+
+  header.masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px 32px;
+    padding-bottom: 22px;
+    margin-bottom: 26px;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .masthead-title {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: clamp(30px, 4.4vw, 46px);
+    line-height: 1;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .masthead-title .accent { color: var(--accent); }
+
+  .masthead-sub {
+    font-family: "Lora", serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 15px;
+    max-width: 46ch;
+    margin: 6px 0 0;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 22px;
+    align-items: flex-end;
+  }
+
+  .stat {
+    text-align: right;
+  }
+
+  .stat .num {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat.full .num { color: var(--full-ink); }
+  .stat.partial .num { color: var(--partial-ink); }
+
+  .stat .label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 2px;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: var(--ground);
+    padding: 10px 0 14px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pill {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .pill:hover { border-color: var(--accent); color: var(--ink); }
+  .pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .pill.active { background: var(--ink); color: var(--ground); border-color: var(--ink); }
+
+  .legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .swatch.full { background: var(--full); }
+  .swatch.partial { background: var(--partial); }
+  .swatch.home { background: var(--home); border-radius: 3px; transform: rotate(45deg); }
+
+  main.layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 460px) 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 18px;
+  }
+
+  @media (max-width: 880px) {
+    main.layout { grid-template-columns: 1fr; }
+  }
+
+  .map-panel {
+    position: sticky;
+    top: 64px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 880px) { .map-panel { position: static; } }
+
+  .map-caption {
+    font-size: 12px;
+    color: var(--ink-faint);
+    margin: 10px 2px 0;
+    line-height: 1.5;
+  }
+
+  svg.map {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+
+  .ring {
+    fill: none;
+    stroke: var(--line-strong);
+    stroke-width: 1;
+    stroke-dasharray: 2.5 4;
+  }
+
+  .ring-label {
+    font-family: "Barlow", sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    fill: var(--ink-faint);
+  }
+
+  .zone-label {
+    font-family: "Barlow", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    fill: var(--ink-faint);
+    text-transform: uppercase;
+  }
+
+  .palace-mark circle {
+    fill: var(--accent);
+    stroke: var(--surface);
+    stroke-width: 3;
+  }
+  .palace-label {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    fill: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .palace-sub {
+    font-family: "Barlow", sans-serif;
+    font-size: 9.5px;
+    fill: var(--ink-faint);
+  }
+
+  .home-mark rect {
+    fill: var(--home);
+    stroke: var(--surface);
+    stroke-width: 2.5;
+  }
+  .home-label {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    fill: var(--home-ink);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .home-sub {
+    font-family: "Barlow", sans-serif;
+    font-size: 9.5px;
+    fill: var(--ink-faint);
+  }
+
+  .pin { cursor: pointer; }
+  .pin-dot {
+    stroke: var(--surface);
+    stroke-width: 2;
+    transition: r 0.12s ease;
+  }
+  .pin.full .pin-dot { fill: var(--full); }
+  .pin.partial .pin-dot { fill: var(--partial); }
+  .pin-num {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    fill: var(--surface);
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+  }
+  .pin:hover .pin-dot, .pin:focus-visible .pin-dot, .pin.hot .pin-dot { r: 12; }
+  .pin:focus-visible { outline: none; }
+  .pin.dim { opacity: 0.16; }
+
+  .compass {
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    fill: var(--ink-faint);
+    text-anchor: middle;
+  }
+
+  .list-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    display: flex;
+    gap: 12px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    scroll-margin-top: 76px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .card.hot { border-color: var(--accent); transform: translateX(2px); }
+  .card.hidden { display: none; }
+
+  .card-badge {
+    flex: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--surface-raised);
+  }
+  .card.full .card-badge { background: var(--full); }
+  .card.partial .card-badge { background: var(--partial); }
+
+  .card.home-banner {
+    background: var(--home-bg);
+    border: 1px solid color-mix(in srgb, var(--home) 45%, transparent);
+    margin-bottom: 4px;
+  }
+  .home-badge {
+    background: var(--home);
+    font-size: 15px;
+    border-radius: 7px;
+  }
+  .card-top .home-tag {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--home-ink);
+    background: var(--home-bg);
+    border: 1px solid color-mix(in srgb, var(--home) 40%, transparent);
+    padding: 2px 7px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 6px;
+  }
+
+  .card-body { flex: 1; min-width: 0; }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .card-top h3 {
+    font-family: "Lora", serif;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .card-top .dist {
+    flex: none;
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+  .tag.full { background: var(--full-bg); color: var(--full-ink); }
+  .tag.partial { background: var(--partial-bg); color: var(--partial-ink); }
+
+  .cuisine {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+  }
+
+  .note {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+
+  .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+
+  .address {
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+
+  .maps-link {
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .maps-link:hover { text-decoration: underline; }
+
+  footer.disclaimer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line-strong);
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    line-height: 1.6;
+    max-width: 72ch;
+  }
+  footer.disclaimer strong { color: var(--ink-soft); }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div>
+      <h1 class="masthead-title">Deoksugung <span class="accent">Gluten-Free</span> Guide</h1>
+      <p class="masthead-sub">Every gluten-free and gluten-free-friendly kitchen we could confirm within 5 miles of Deoksugung Palace, Seoul — plotted by straight-line distance.</p>
+    </div>
+    <div class="stat-row">
+      <div class="stat full"><span class="num">5</span><span class="label">Fully GF</span></div>
+      <div class="stat partial"><span class="num">16</span><span class="label">GF Options</span></div>
+      <div class="stat"><span class="num">5</span><span class="label">Mile Radius</span></div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="pills" role="group" aria-label="Filter by gluten-free status">
+      <button class="pill active" data-filter="all">All 21</button>
+      <button class="pill" data-filter="full">Fully GF</button>
+      <button class="pill" data-filter="partial">GF Options</button>
+    </div>
+    <div class="legend">
+      <span><i class="swatch full"></i>Dedicated gluten-free kitchen</span>
+      <span><i class="swatch partial"></i>Gluten-free options available</span>
+      <span><i class="swatch home"></i>Airbnb — home base</span>
+    </div>
+  </div>
+
+  <main class="layout">
+    <div class="map-panel">
+      <svg class="map" viewBox="0 0 600 600" role="img" aria-label="Map of gluten-free restaurants within 5 miles of Deoksugung Palace">
+        <circle class="ring" cx="300" cy="300" r="52" />
+<circle class="ring" cx="300" cy="300" r="104" />
+<circle class="ring" cx="300" cy="300" r="156" />
+<circle class="ring" cx="300" cy="300" r="208" />
+<circle class="ring" cx="300" cy="300" r="260" />
+<text class="ring-label" x="306" y="244">1 MI</text>
+<text class="ring-label" x="306" y="192">2 MI</text>
+<text class="ring-label" x="306" y="140">3 MI</text>
+<text class="ring-label" x="306" y="88">4 MI</text>
+<text class="ring-label" x="306" y="36">5 MI</text>
+<text class="zone-label" x="314" y="205" text-anchor="start">JONGNO · INSADONG · BUKCHON</text>
+<text class="zone-label" x="324" y="346" text-anchor="start">MYEONGDONG · EULJIRO</text>
+<text class="zone-label" x="400" y="260" text-anchor="start">DONGDAEMUN</text>
+<text class="zone-label" x="344" y="468" text-anchor="middle">ITAEWON · YONGSAN</text>
+<text class="zone-label" x="154" y="274" text-anchor="middle">HONGDAE · MAPO</text>
+<text class="zone-label" x="159" y="468" text-anchor="middle">YEOUIDO</text>
+<g class="pin partial" data-id="p1" tabindex="0" role="button" aria-label="W XYZ Bar, 0.24 miles"><circle class="pin-dot" cx="317.2" cy="291.2" r="9"></circle><text class="pin-num" x="317.2" y="291.2">1</text></g>
+<g class="pin partial" data-id="p2" tabindex="0" role="button" aria-label="La Seine, 0.36 miles"><circle class="pin-dot" cx="330.2" cy="313.7" r="9"></circle><text class="pin-num" x="330.2" y="313.7">2</text></g>
+<g class="pin partial" data-id="p3" tabindex="0" role="button" aria-label="Odarijip Myeongdong, 0.48 miles"><circle class="pin-dot" cx="304.2" cy="313.7" r="9"></circle><text class="pin-num" x="304.2" y="313.7">3</text></g>
+<g class="pin partial" data-id="p4" tabindex="0" role="button" aria-label="Jihwaja, 0.81 miles"><circle class="pin-dot" cx="286.0" cy="260.4" r="9"></circle><text class="pin-num" x="286.0" y="260.4">4</text></g>
+<g class="pin partial" data-id="p5" tabindex="0" role="button" aria-label="Namusae Tea House, 0.81 miles"><circle class="pin-dot" cx="328.2" cy="268.7" r="9"></circle><text class="pin-num" x="328.2" y="268.7">5</text></g>
+<g class="pin partial" data-id="p6" tabindex="0" role="button" aria-label="Jyoti Indian Restaurant (Chungmuro), 1.11 miles"><circle class="pin-dot" cx="355.6" cy="316.2" r="9"></circle><text class="pin-num" x="355.6" y="316.2">6</text></g>
+<g class="pin partial" data-id="p7" tabindex="0" role="button" aria-label="Biwon Tteokjip, 1.27 miles"><circle class="pin-dot" cx="328.2" cy="239.9" r="9"></circle><text class="pin-num" x="328.2" y="239.9">7</text></g>
+<g class="pin full" data-id="p8" tabindex="0" role="button" aria-label="JeJuice, 1.36 miles"><circle class="pin-dot" cx="369.3" cy="284.5" r="9"></circle><text class="pin-num" x="369.3" y="284.5">8</text></g>
+<g class="pin partial" data-id="p9" tabindex="0" role="button" aria-label="The Parkview, 1.78 miles"><circle class="pin-dot" cx="387.0" cy="332.4" r="9"></circle><text class="pin-num" x="387.0" y="332.4">9</text></g>
+<g class="pin partial" data-id="p10" tabindex="0" role="button" aria-label="Tavolo 24, 1.9 miles"><circle class="pin-dot" cx="397.8" cy="284.5" r="9"></circle><text class="pin-num" x="397.8" y="284.5">10</text></g>
+<g class="pin partial" data-id="p11" tabindex="0" role="button" aria-label="Maple Tree House (Itaewon), 2.4 miles"><circle class="pin-dot" cx="372.0" cy="394.2" r="9"></circle><text class="pin-num" x="372.0" y="394.2">11</text></g>
+<g class="pin partial" data-id="p12" tabindex="0" role="button" aria-label="El Pino 323, 2.41 miles"><circle class="pin-dot" cx="342.9" cy="399.1" r="9"></circle><text class="pin-num" x="342.9" y="399.1">12</text></g>
+<g class="pin full" data-id="p13" tabindex="0" role="button" aria-label="237 Pizza, 2.42 miles"><circle class="pin-dot" cx="361.9" cy="412.9" r="9"></circle><text class="pin-num" x="361.9" y="412.9">13</text></g>
+<g class="pin partial" data-id="p14" tabindex="0" role="button" aria-label="Vatos Urban Tacos (Itaewon), 2.43 miles"><circle class="pin-dot" cx="354.6" cy="435.2" r="9"></circle><text class="pin-num" x="354.6" y="435.2">14</text></g>
+<g class="pin full" data-id="p15" tabindex="0" role="button" aria-label="Plant Cafe &amp; Kitchen, 2.45 miles"><circle class="pin-dot" cx="331.1" cy="435.2" r="9"></circle><text class="pin-num" x="331.1" y="435.2">15</text></g>
+<g class="pin partial" data-id="p16" tabindex="0" role="button" aria-label="Buddha&#x27;s Belly, 2.46 miles"><circle class="pin-dot" cx="323.9" cy="412.9" r="9"></circle><text class="pin-num" x="323.9" y="412.9">16</text></g>
+<g class="pin full" data-id="p17" tabindex="0" role="button" aria-label="Sunnybread (Sunny House), 2.63 miles"><circle class="pin-dot" cx="372.0" cy="424.2" r="9"></circle><text class="pin-num" x="372.0" y="424.2">17</text></g>
+<g class="pin full" data-id="p18" tabindex="0" role="button" aria-label="Monil2 House (모닐이네하우스), 2.9 miles"><circle class="pin-dot" cx="153.2" cy="319.2" r="9"></circle><text class="pin-num" x="153.2" y="319.2">18</text></g>
+<g class="pin partial" data-id="p19" tabindex="0" role="button" aria-label="Choigozip Hongdae, 2.9 miles"><circle class="pin-dot" cx="153.2" cy="349.2" r="9"></circle><text class="pin-num" x="153.2" y="349.2">19</text></g>
+<g class="pin partial" data-id="p20" tabindex="0" role="button" aria-label="Gusto Taco, 3.15 miles"><circle class="pin-dot" cx="149.5" cy="364.7" r="9"></circle><text class="pin-num" x="149.5" y="364.7">20</text></g>
+<g class="pin partial" data-id="p21" tabindex="0" role="button" aria-label="Atrio / SUT / Zest, 3.87 miles"><circle class="pin-dot" cx="158.9" cy="443.5" r="9"></circle><text class="pin-num" x="158.9" y="443.5">21</text></g>
+<g class="home-mark">
+<rect x="253" y="333" width="14" height="14" rx="2.5" transform="rotate(45 260 340)"></rect>
+</g>
+<text class="home-label" x="247" y="337" text-anchor="end">Airbnb</text>
+<text class="home-sub" x="247" y="350" text-anchor="end">Home base</text>
+        <text class="compass" x="300" y="18">N</text>
+        <path class="compass" d="M296 30 L300 22 L304 30 Z" fill="var(--ink-faint)" stroke="none"></path>
+        <g class="palace-mark">
+          <circle cx="300" cy="300" r="7"></circle>
+        </g>
+        <text class="palace-label" x="287" y="296" text-anchor="end">Deoksugung</text>
+        <text class="palace-sub" x="287" y="309" text-anchor="end">Palace · center point</text>
+      </svg>
+      <p class="map-caption">Pins are numbered by distance, nearest first, and colored by gluten-free status. The diamond marks your Airbnb. Positions are approximate — several Itaewon, Myeongdong, and near-palace addresses sit close enough together to be nudged apart for legibility. Distances are straight-line ("as the crow flies"), not walking distance.</p>
+    </div>
+
+    <div class="list-col" id="list">
+      <article class="card home-banner">
+        <div class="card-badge home-badge">⌂</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Airbnb <span class="home-tag">Home base</span></h3>
+            <span class="dist">0.31 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="cuisine">Bukchang-dong, Jung-gu — 0.31 miles from Deoksugung Palace</span>
+          </div>
+          <div class="card-bottom">
+            <span class="address">14 Namdaemun-ro 1-gil, Jung-gu, Seoul 04526</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.562,126.978" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+      
+      <article class="card partial" id="p1" data-status="partial">
+        <div class="card-badge">1</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>W XYZ Bar</h3>
+            <span class="dist">0.24 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Bar bites</span>
+          </div>
+          <p class="note">Small-plates bar menu that includes gluten-free bites.</p>
+          <div class="card-bottom">
+            <span class="address">Aloft Myeongdong, 56 Namdaemun-ro, Jung-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5636,126.9784" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p2" data-status="partial">
+        <div class="card-badge">2</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>La Seine</h3>
+            <span class="dist">0.36 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">International buffet</span>
+          </div>
+          <p class="note">Hotel buffet with clearly marked gluten-free stations.</p>
+          <div class="card-bottom">
+            <span class="address">Lotte Hotel Seoul, 30 Eulji-ro, Jung-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5648,126.9816" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p3" data-status="partial">
+        <div class="card-badge">3</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Odarijip Myeongdong</h3>
+            <span class="dist">0.48 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Korean (soy-marinated crab)</span>
+          </div>
+          <p class="note">Rice-based Korean dishes, naturally low-gluten — confirm sauces.</p>
+          <div class="card-bottom">
+            <span class="address">Myeongdong, Jung-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5638,126.9834" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p4" data-status="partial">
+        <div class="card-badge">4</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Jihwaja</h3>
+            <span class="dist">0.81 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Korean royal court cuisine</span>
+          </div>
+          <p class="note">Upscale hanjeongsik set courses with gluten-free accommodations.</p>
+          <div class="card-bottom">
+            <span class="address">125 Jahamun-ro, Jongno-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5768,126.9702" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p5" data-status="partial">
+        <div class="card-badge">5</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Namusae Tea House</h3>
+            <span class="dist">0.81 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Traditional tea house</span>
+          </div>
+          <p class="note">Hanok tea house; tea and rice-based sweets with GF options.</p>
+          <div class="card-bottom">
+            <span class="address">47-9 Insadong-gil, Gwanhun-dong, Jongno-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5745,126.985" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p6" data-status="partial">
+        <div class="card-badge">6</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Jyoti Indian Restaurant (Chungmuro)</h3>
+            <span class="dist">1.11 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Indian</span>
+          </div>
+          <p class="note">Veg &amp; non-veg Indian menu with rice-based, GF-friendly curries.</p>
+          <div class="card-bottom">
+            <span class="address">Chungmuro, Jung-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5613,126.9946" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p7" data-status="partial">
+        <div class="card-badge">7</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Biwon Tteokjip</h3>
+            <span class="dist">1.27 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Rice cake (tteok) shop</span>
+          </div>
+          <p class="note">Traditional rice cakes, naturally GF — check mixed-grain varieties.</p>
+          <div class="card-bottom">
+            <span class="address">Gahoe-dong, Bukchon, Jongno-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5825,126.985" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full" id="p8" data-status="full">
+        <div class="card-badge">8</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>JeJuice</h3>
+            <span class="dist">1.36 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag full">FULLY GLUTEN-FREE</span>
+            <span class="cuisine">Juice &amp; smoothie bar</span>
+          </div>
+          <p class="note">Dedicated gluten-free juice &amp; smoothie spot right by the market.</p>
+          <div class="card-bottom">
+            <span class="address">Near Gwangjang Market, Jongno-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5701,126.9994" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p9" data-status="partial">
+        <div class="card-badge">9</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>The Parkview</h3>
+            <span class="dist">1.78 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Pan-Asian buffet</span>
+          </div>
+          <p class="note">Hotel buffet with gluten-free-friendly stations.</p>
+          <div class="card-bottom">
+            <span class="address">The Shilla Seoul, 202 Jangchung-dong, Jung-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5568,127.0056" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p10" data-status="partial">
+        <div class="card-badge">10</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Tavolo 24</h3>
+            <span class="dist">1.9 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">International buffet</span>
+          </div>
+          <p class="note">Hotel buffet with gluten-free options available.</p>
+          <div class="card-bottom">
+            <span class="address">JW Marriott Dongdaemun Square</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5701,127.0094" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p11" data-status="partial">
+        <div class="card-badge">11</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Maple Tree House (Itaewon)</h3>
+            <span class="dist">2.4 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Korean BBQ</span>
+          </div>
+          <p class="note">Grilled meats are naturally GF-friendly — watch the marinades.</p>
+          <div class="card-bottom">
+            <span class="address">26 Itaewon-ro 27ga-gil, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5365,126.9985" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p12" data-status="partial">
+        <div class="card-badge">12</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>El Pino 323</h3>
+            <span class="dist">2.41 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Mexican</span>
+          </div>
+          <p class="note">Corn tortilla tacos available.</p>
+          <div class="card-bottom">
+            <span class="address">Noksapyeong area, Itaewon, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5325,126.988" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full" id="p13" data-status="full">
+        <div class="card-badge">13</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>237 Pizza</h3>
+            <span class="dist">2.42 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag full">FULLY GLUTEN-FREE</span>
+            <span class="cuisine">Pizza</span>
+          </div>
+          <p class="note">Dedicated gluten-free pizzeria, a celiac favorite in Itaewon.</p>
+          <div class="card-bottom">
+            <span class="address">Itaewon, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.533,126.9908" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p14" data-status="partial">
+        <div class="card-badge">14</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Vatos Urban Tacos (Itaewon)</h3>
+            <span class="dist">2.43 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Korean-Mexican fusion</span>
+          </div>
+          <p class="note">Corn tortilla tacos available gluten-free.</p>
+          <div class="card-bottom">
+            <span class="address">Itaewon-ro 15-gil, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5339,126.9938" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full" id="p15" data-status="full">
+        <div class="card-badge">15</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Plant Cafe &amp; Kitchen</h3>
+            <span class="dist">2.45 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag full">FULLY GLUTEN-FREE</span>
+            <span class="cuisine">Vegan / plant-based</span>
+          </div>
+          <p class="note">100% plant-based menu; still confirm specific dishes with staff.</p>
+          <div class="card-bottom">
+            <span class="address">Itaewon (Usadan-ro area), Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5325,126.9903" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p16" data-status="partial">
+        <div class="card-badge">16</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Buddha&#x27;s Belly</h3>
+            <span class="dist">2.46 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Thai</span>
+          </div>
+          <p class="note">Rice noodle dishes that are GF-adaptable.</p>
+          <div class="card-bottom">
+            <span class="address">48 Noksapyeong-daero 40-gil, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5316,126.9878" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full" id="p17" data-status="full">
+        <div class="card-badge">17</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Sunnybread (Sunny House)</h3>
+            <span class="dist">2.63 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag full">FULLY GLUTEN-FREE</span>
+            <span class="cuisine">Bakery</span>
+          </div>
+          <p class="note">Dedicated gluten-free bakery — breads, cookies &amp; cakes.</p>
+          <div class="card-bottom">
+            <span class="address">Hannam-dong, Yongsan-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5344,127.0022" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card full" id="p18" data-status="full">
+        <div class="card-badge">18</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Monil2 House (모닐이네하우스)</h3>
+            <span class="dist">2.9 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag full">FULLY GLUTEN-FREE</span>
+            <span class="cuisine">Bakery / cafe</span>
+          </div>
+          <p class="note">Dedicated GF bread &amp; dessert cafe; allergens labeled in Korean &amp; English.</p>
+          <div class="card-bottom">
+            <span class="address">Hongdae area, Mapo-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5563,126.9236" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p19" data-status="partial">
+        <div class="card-badge">19</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Choigozip Hongdae</h3>
+            <span class="dist">2.9 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Korean BBQ (samgyeopsal)</span>
+          </div>
+          <p class="note">Grilled pork belly, naturally GF — watch dipping sauces.</p>
+          <div class="card-bottom">
+            <span class="address">25 World Cup buk-ro 2-gil, Mapo-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5563,126.9236" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p20" data-status="partial">
+        <div class="card-badge">20</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Gusto Taco</h3>
+            <span class="dist">3.15 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Mexican</span>
+          </div>
+          <p class="note">Corn or flour tortilla — ask for corn to keep it gluten-free.</p>
+          <div class="card-bottom">
+            <span class="address">146-6 Sangsu-dong, Mapo-gu</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5478,126.9223" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card partial" id="p21" data-status="partial">
+        <div class="card-badge">21</div>
+        <div class="card-body">
+          <div class="card-top">
+            <h3>Atrio / SUT / Zest</h3>
+            <span class="dist">3.87 mi</span>
+          </div>
+          <div class="card-meta">
+            <span class="tag partial">GLUTEN-FREE OPTIONS</span>
+            <span class="cuisine">Hotel restaurants (Mediterranean / steak / buffet)</span>
+          </div>
+          <p class="note">Three Conrad Seoul restaurants, each with GF menu items.</p>
+          <div class="card-bottom">
+            <span class="address">Conrad Seoul, Yeouido</span>
+            <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=37.5259,126.9256" target="_blank" rel="noopener">Open in Maps ↗</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="disclaimer">
+    <strong>Before you go:</strong> "Gluten-free options" means the kitchen offers dishes that can be made gluten-free (e.g. rice-based Korean food, corn tortillas), not that the kitchen is dedicated or cross-contamination-free — confirm directly with staff if you have celiac disease, not just gluten sensitivity. Only the five marked <strong>Fully GF</strong> spots advertise a dedicated gluten-free kitchen or menu. Restaurant hours, menus, and gluten-free policies change — verify before visiting. Compiled from HappyCow, FindMeGlutenFree, and independent celiac travel guides, August 2026.
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  var pins = Array.prototype.slice.call(document.querySelectorAll('.pin'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var pills = Array.prototype.slice.call(document.querySelectorAll('.pill'));
+
+  function clearHot() {
+    pins.forEach(function(p) { p.classList.remove('hot'); });
+    cards.forEach(function(c) { c.classList.remove('hot'); });
+  }
+
+  function activate(id) {
+    clearHot();
+    var pin = document.querySelector('.pin[data-id="' + id + '"]');
+    var card = document.getElementById(id);
+    if (pin) pin.classList.add('hot');
+    if (card) {
+      card.classList.add('hot');
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  pins.forEach(function(p) {
+    p.addEventListener('click', function() { activate(p.getAttribute('data-id')); });
+    p.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(p.getAttribute('data-id')); }
+    });
+  });
+  cards.forEach(function(c) {
+    c.addEventListener('mouseenter', function() {
+      var pin = document.querySelector('.pin[data-id="' + c.id + '"]');
+      if (pin) pin.classList.add('hot');
+    });
+    c.addEventListener('mouseleave', function() {
+      var pin = document.querySelector('.pin[data-id="' + c.id + '"]');
+      if (pin) pin.classList.remove('hot');
+    });
+  });
+
+  pills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      pills.forEach(function(x) { x.classList.remove('active'); });
+      pill.classList.add('active');
+      var f = pill.getAttribute('data-filter');
+      cards.forEach(function(c) {
+        c.classList.toggle('hidden', f !== 'all' && c.getAttribute('data-status') !== f);
+      });
+      pins.forEach(function(p) {
+        var status = p.classList.contains('full') ? 'full' : 'partial';
+        p.classList.toggle('dim', f !== 'all' && status !== f);
+      });
+    });
+  });
+})();
+</script>
